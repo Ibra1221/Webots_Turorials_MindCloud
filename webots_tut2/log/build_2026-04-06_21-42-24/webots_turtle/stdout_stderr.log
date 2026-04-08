@@ -1,0 +1,41 @@
+running egg_info
+creating ../../build/webots_turtle/webots_turtle.egg-info
+writing ../../build/webots_turtle/webots_turtle.egg-info/PKG-INFO
+writing dependency_links to ../../build/webots_turtle/webots_turtle.egg-info/dependency_links.txt
+writing entry points to ../../build/webots_turtle/webots_turtle.egg-info/entry_points.txt
+writing requirements to ../../build/webots_turtle/webots_turtle.egg-info/requires.txt
+writing top-level names to ../../build/webots_turtle/webots_turtle.egg-info/top_level.txt
+writing manifest file '../../build/webots_turtle/webots_turtle.egg-info/SOURCES.txt'
+reading manifest file '../../build/webots_turtle/webots_turtle.egg-info/SOURCES.txt'
+writing manifest file '../../build/webots_turtle/webots_turtle.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/mohanad/webots_tut2/build/webots_turtle/build
+creating /home/mohanad/webots_tut2/build/webots_turtle/build/lib
+creating /home/mohanad/webots_tut2/build/webots_turtle/build/lib/webots_turtle
+copying webots_turtle/driver_turtle.py -> /home/mohanad/webots_tut2/build/webots_turtle/build/lib/webots_turtle
+copying webots_turtle/__init__.py -> /home/mohanad/webots_tut2/build/webots_turtle/build/lib/webots_turtle
+running install
+running install_lib
+creating /home/mohanad/webots_tut2/install/webots_turtle/lib/python3.12/site-packages/webots_turtle
+copying /home/mohanad/webots_tut2/build/webots_turtle/build/lib/webots_turtle/driver_turtle.py -> /home/mohanad/webots_tut2/install/webots_turtle/lib/python3.12/site-packages/webots_turtle
+copying /home/mohanad/webots_tut2/build/webots_turtle/build/lib/webots_turtle/__init__.py -> /home/mohanad/webots_tut2/install/webots_turtle/lib/python3.12/site-packages/webots_turtle
+byte-compiling /home/mohanad/webots_tut2/install/webots_turtle/lib/python3.12/site-packages/webots_turtle/driver_turtle.py to driver_turtle.cpython-312.pyc
+byte-compiling /home/mohanad/webots_tut2/install/webots_turtle/lib/python3.12/site-packages/webots_turtle/__init__.py to __init__.cpython-312.pyc
+running install_data
+creating /home/mohanad/webots_tut2/install/webots_turtle/share/ament_index
+creating /home/mohanad/webots_tut2/install/webots_turtle/share/ament_index/resource_index
+creating /home/mohanad/webots_tut2/install/webots_turtle/share/ament_index/resource_index/packages
+copying resource/webots_turtle -> /home/mohanad/webots_tut2/install/webots_turtle/share/ament_index/resource_index/packages
+copying package.xml -> /home/mohanad/webots_tut2/install/webots_turtle/share/webots_turtle
+creating /home/mohanad/webots_tut2/install/webots_turtle/share/webots_turtle/urdf
+copying urdf/robot.urdf -> /home/mohanad/webots_tut2/install/webots_turtle/share/webots_turtle/urdf
+creating /home/mohanad/webots_tut2/install/webots_turtle/share/webots_turtle/worlds
+copying worlds/Webots_world.wbt -> /home/mohanad/webots_tut2/install/webots_turtle/share/webots_turtle/worlds
+creating /home/mohanad/webots_tut2/install/webots_turtle/share/webots_turtle/launch
+copying launch/sim_launch_2.py -> /home/mohanad/webots_tut2/install/webots_turtle/share/webots_turtle/launch
+running install_egg_info
+Copying ../../build/webots_turtle/webots_turtle.egg-info to /home/mohanad/webots_tut2/install/webots_turtle/lib/python3.12/site-packages/webots_turtle-0.0.0-py3.12.egg-info
+running install_scripts
+Installing webots_turtle script to /home/mohanad/webots_tut2/install/webots_turtle/lib/webots_turtle
+writing list of installed files to '/home/mohanad/webots_tut2/build/webots_turtle/install.log'

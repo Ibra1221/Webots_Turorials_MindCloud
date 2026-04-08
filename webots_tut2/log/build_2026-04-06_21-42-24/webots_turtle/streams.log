@@ -1,0 +1,43 @@
+[1.551s] Invoking command in '/home/mohanad/webots_tut2/src/webots_turtle': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/mohanad/webots_tut2/build/webots_turtle/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/mohanad/webots_tut2/install/webots_turtle/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/webots_turtle build --build-base /home/mohanad/webots_tut2/build/webots_turtle/build install --record /home/mohanad/webots_tut2/build/webots_turtle/install.log --single-version-externally-managed install_data
+[1.929s] running egg_info
+[1.929s] creating ../../build/webots_turtle/webots_turtle.egg-info
+[1.953s] writing ../../build/webots_turtle/webots_turtle.egg-info/PKG-INFO
+[1.953s] writing dependency_links to ../../build/webots_turtle/webots_turtle.egg-info/dependency_links.txt
+[1.953s] writing entry points to ../../build/webots_turtle/webots_turtle.egg-info/entry_points.txt
+[1.953s] writing requirements to ../../build/webots_turtle/webots_turtle.egg-info/requires.txt
+[1.954s] writing top-level names to ../../build/webots_turtle/webots_turtle.egg-info/top_level.txt
+[1.954s] writing manifest file '../../build/webots_turtle/webots_turtle.egg-info/SOURCES.txt'
+[2.009s] reading manifest file '../../build/webots_turtle/webots_turtle.egg-info/SOURCES.txt'
+[2.010s] writing manifest file '../../build/webots_turtle/webots_turtle.egg-info/SOURCES.txt'
+[2.010s] running build
+[2.010s] running build_py
+[2.010s] creating /home/mohanad/webots_tut2/build/webots_turtle/build
+[2.010s] creating /home/mohanad/webots_tut2/build/webots_turtle/build/lib
+[2.010s] creating /home/mohanad/webots_tut2/build/webots_turtle/build/lib/webots_turtle
+[2.010s] copying webots_turtle/driver_turtle.py -> /home/mohanad/webots_tut2/build/webots_turtle/build/lib/webots_turtle
+[2.015s] copying webots_turtle/__init__.py -> /home/mohanad/webots_tut2/build/webots_turtle/build/lib/webots_turtle
+[2.015s] running install
+[2.022s] running install_lib
+[2.046s] creating /home/mohanad/webots_tut2/install/webots_turtle/lib/python3.12/site-packages/webots_turtle
+[2.046s] copying /home/mohanad/webots_tut2/build/webots_turtle/build/lib/webots_turtle/driver_turtle.py -> /home/mohanad/webots_tut2/install/webots_turtle/lib/python3.12/site-packages/webots_turtle
+[2.046s] copying /home/mohanad/webots_tut2/build/webots_turtle/build/lib/webots_turtle/__init__.py -> /home/mohanad/webots_tut2/install/webots_turtle/lib/python3.12/site-packages/webots_turtle
+[2.047s] byte-compiling /home/mohanad/webots_tut2/install/webots_turtle/lib/python3.12/site-packages/webots_turtle/driver_turtle.py to driver_turtle.cpython-312.pyc
+[2.047s] byte-compiling /home/mohanad/webots_tut2/install/webots_turtle/lib/python3.12/site-packages/webots_turtle/__init__.py to __init__.cpython-312.pyc
+[2.048s] running install_data
+[2.048s] creating /home/mohanad/webots_tut2/install/webots_turtle/share/ament_index
+[2.048s] creating /home/mohanad/webots_tut2/install/webots_turtle/share/ament_index/resource_index
+[2.048s] creating /home/mohanad/webots_tut2/install/webots_turtle/share/ament_index/resource_index/packages
+[2.048s] copying resource/webots_turtle -> /home/mohanad/webots_tut2/install/webots_turtle/share/ament_index/resource_index/packages
+[2.048s] copying package.xml -> /home/mohanad/webots_tut2/install/webots_turtle/share/webots_turtle
+[2.048s] creating /home/mohanad/webots_tut2/install/webots_turtle/share/webots_turtle/urdf
+[2.048s] copying urdf/robot.urdf -> /home/mohanad/webots_tut2/install/webots_turtle/share/webots_turtle/urdf
+[2.048s] creating /home/mohanad/webots_tut2/install/webots_turtle/share/webots_turtle/worlds
+[2.049s] copying worlds/Webots_world.wbt -> /home/mohanad/webots_tut2/install/webots_turtle/share/webots_turtle/worlds
+[2.049s] creating /home/mohanad/webots_tut2/install/webots_turtle/share/webots_turtle/launch
+[2.049s] copying launch/sim_launch_2.py -> /home/mohanad/webots_tut2/install/webots_turtle/share/webots_turtle/launch
+[2.049s] running install_egg_info
+[2.081s] Copying ../../build/webots_turtle/webots_turtle.egg-info to /home/mohanad/webots_tut2/install/webots_turtle/lib/python3.12/site-packages/webots_turtle-0.0.0-py3.12.egg-info
+[2.082s] running install_scripts
+[2.352s] Installing webots_turtle script to /home/mohanad/webots_tut2/install/webots_turtle/lib/webots_turtle
+[2.352s] writing list of installed files to '/home/mohanad/webots_tut2/build/webots_turtle/install.log'
+[2.619s] Invoked command in '/home/mohanad/webots_tut2/src/webots_turtle' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/mohanad/webots_tut2/build/webots_turtle/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/mohanad/webots_tut2/install/webots_turtle/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/webots_turtle build --build-base /home/mohanad/webots_tut2/build/webots_turtle/build install --record /home/mohanad/webots_tut2/build/webots_turtle/install.log --single-version-externally-managed install_data

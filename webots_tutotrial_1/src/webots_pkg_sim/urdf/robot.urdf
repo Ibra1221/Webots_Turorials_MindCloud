@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<robot name="rosbot_xl">
+  <link name="base_link">
+    <visual>
+      <origin xyz="0 0 0.082" rpy="0 0 0"/>
+      <geometry><box size="0.27 0.21 0.099"/></geometry>
+    </visual>
+  </link>
+
+  <joint name="fl_wheel_joint" type="continuous">
+    <parent link="base_link"/>
+    <child link="front_left_wheel"/>
+    <axis xyz="0 1 0"/>
+    <origin xyz="0.085 0.135 0.048" rpy="0 0 0"/>
+  </joint>
+  <link name="front_left_wheel">
+    <visual>
+      <origin xyz="0 0 0" rpy="-1.5708 0 0"/>
+      <geometry><cylinder radius="0.05" length="0.05"/></geometry>
+    </visual>
+  </link>
+
+  <joint name="fr_wheel_joint" type="continuous">
+    <parent link="base_link"/>
+    <child link="front_right_wheel"/>
+    <axis xyz="0 1 0"/>
+    <origin xyz="0.085 -0.135 0.048" rpy="0 0 0"/>
+  </joint>
+  <link name="front_right_wheel">
+    <visual>
+      <origin xyz="0 0 0" rpy="-1.5708 0 0"/>
+      <geometry><cylinder radius="0.05" length="0.05"/></geometry>
+    </visual>
+  </link>
+
+  <joint name="rl_wheel_joint" type="continuous">
+    <parent link="base_link"/>
+    <child link="rear_left_wheel"/>
+    <axis xyz="0 1 0"/>
+    <origin xyz="-0.085 0.135 0.048" rpy="0 0 0"/>
+  </joint>
+  <link name="rear_left_wheel">
+    <visual>
+      <origin xyz="0 0 0" rpy="-1.5708 0 0"/>
+      <geometry><cylinder radius="0.05" length="0.05"/></geometry>
+    </visual>
+  </link>
+
+  <joint name="rr_wheel_joint" type="continuous">
+    <parent link="base_link"/>
+    <child link="rear_right_wheel"/>
+    <axis xyz="0 1 0"/>
+    <origin xyz="-0.085 -0.135 0.048" rpy="0 0 0"/>
+  </joint>
+  <link name="rear_right_wheel">
+    <visual>
+      <origin xyz="0 0 0" rpy="-1.5708 0 0"/>
+      <geometry><cylinder radius="0.05" length="0.05"/></geometry>
+    </visual>
+  </link>
+
+  <joint name="laser_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="laser_link"/>
+    <origin xyz="0.1 0 0.16" rpy="0 0 0"/>
+  </joint>
+  <link name="laser_link"/>
+
+  <webots>
+    <plugin type="webots_pkg_sim.webots_driver.RobotDriver"/>
+  </webots>
+</robot>

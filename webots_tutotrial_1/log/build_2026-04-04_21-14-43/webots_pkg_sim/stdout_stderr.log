@@ -1,0 +1,20 @@
+running egg_info
+writing ../../build/webots_pkg_sim/webots_pkg_sim.egg-info/PKG-INFO
+writing dependency_links to ../../build/webots_pkg_sim/webots_pkg_sim.egg-info/dependency_links.txt
+writing entry points to ../../build/webots_pkg_sim/webots_pkg_sim.egg-info/entry_points.txt
+writing requirements to ../../build/webots_pkg_sim/webots_pkg_sim.egg-info/requires.txt
+writing top-level names to ../../build/webots_pkg_sim/webots_pkg_sim.egg-info/top_level.txt
+reading manifest file '../../build/webots_pkg_sim/webots_pkg_sim.egg-info/SOURCES.txt'
+writing manifest file '../../build/webots_pkg_sim/webots_pkg_sim.egg-info/SOURCES.txt'
+running build
+running build_py
+copying webots_pkg_sim/webots_localization.py -> /home/mohanad/webots_tutotrial_1/build/webots_pkg_sim/build/lib/webots_pkg_sim
+running install
+running install_lib
+copying /home/mohanad/webots_tutotrial_1/build/webots_pkg_sim/build/lib/webots_pkg_sim/webots_localization.py -> /home/mohanad/webots_tutotrial_1/install/webots_pkg_sim/lib/python3.12/site-packages/webots_pkg_sim
+byte-compiling /home/mohanad/webots_tutotrial_1/install/webots_pkg_sim/lib/python3.12/site-packages/webots_pkg_sim/webots_localization.py to webots_localization.cpython-312.pyc
+running install_data
+copying package.xml -> /home/mohanad/webots_tutotrial_1/install/webots_pkg_sim/share/webots_pkg_sim
+copying launch/sim_launch.py -> /home/mohanad/webots_tutotrial_1/install/webots_pkg_sim/share/webots_pkg_sim/launch
+copying urdf/new_rover.urdf -> /home/mohanad/webots_tutotrial_1/install/webots_pkg_sim/share/webots_pkg_sim/urdf
+error: can't copy 'worlds/rover_world.wbt': doesn't exist or not a regular file

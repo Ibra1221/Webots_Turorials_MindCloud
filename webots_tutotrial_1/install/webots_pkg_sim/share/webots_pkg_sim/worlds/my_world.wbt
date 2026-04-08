@@ -1,0 +1,177 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+
+WorldInfo { basicTimeStep 16 }
+Viewpoint {
+  orientation -0.3 0.9 0.3 1.2
+  position -3 -2 3
+}
+TexturedBackground {}
+TexturedBackgroundLight {}
+RectangleArena { floorSize 10 10 }
+
+Robot {
+  name "new_rover"
+  controller "<extern>"
+  translation 0 0 0.1987
+
+  children [
+
+    # BASE BODY
+    Shape {
+      castShadows FALSE
+      appearance PBRAppearance { baseColor 0.2 0.2 0.8 roughness 0.5 metalness 0.3 }
+      geometry Mesh { url "/home/mohanad/webots_tutotrial_1/src/webots_pkg_sim/meshes/base_link.STL" }
+    }
+
+    # STEERING 1 + WHEEL 1 (front left)
+    HingeJoint {
+      jointParameters HingeJointParameters { axis 0 0 1 anchor 0.34672 0.2949 0.041107 }
+      device [ RotationalMotor { name "steering1_joint" maxVelocity 1.0 minPosition -1.57 maxPosition 1.57 } ]
+      endPoint Solid {
+        name "steering1_solid"
+        translation 0.34672 0.2949 0.041107
+        children [
+          Shape {
+            castShadows FALSE
+            appearance PBRAppearance { baseColor 0.3 0.3 0.3 roughness 0.7 }
+            geometry Mesh { url "/home/mohanad/webots_tutotrial_1/src/webots_pkg_sim/meshes/steering1_Link.STL" }
+          }
+          HingeJoint {
+            jointParameters HingeJointParameters { axis 0 1 0 anchor 0.045 -0.0782 -0.1538 }
+            device [ RotationalMotor { name "wheel1_joint" maxVelocity 20.0 } ]
+            endPoint Solid {
+              name "wheel1_solid"
+              translation 0.045 -0.0782 -0.1538
+              children [
+                Shape {
+                  castShadows FALSE
+                  appearance PBRAppearance { baseColor 0.1 0.1 0.1 roughness 1.0 }
+                  geometry Mesh { url "/home/mohanad/webots_tutotrial_1/src/webots_pkg_sim/meshes/wheel1_Link.STL" }
+                }
+              ]
+              boundingObject Cylinder { radius 0.086 height 0.1134 }
+              physics Physics { density -1 mass 1.0 }
+            }
+          }
+        ]
+        boundingObject Box { size 0.05 0.05 0.1 }
+        physics Physics { density -1 mass 0.5 }
+      }
+    }
+
+    # STEERING 2 + WHEEL 2 (front right)
+    HingeJoint {
+      jointParameters HingeJointParameters { axis 0 0 1 anchor -0.34672 0.2949 0.041107 }
+      device [ RotationalMotor { name "steering2_joint" maxVelocity 1.0 minPosition -1.57 maxPosition 1.57 } ]
+      endPoint Solid {
+        name "steering2_solid"
+        translation -0.34672 0.2949 0.041107
+        children [
+          Shape {
+            castShadows FALSE
+            appearance PBRAppearance { baseColor 0.3 0.3 0.3 roughness 0.7 }
+            geometry Mesh { url "/home/mohanad/webots_tutotrial_1/src/webots_pkg_sim/meshes/steering2_Link.STL" }
+          }
+          HingeJoint {
+            jointParameters HingeJointParameters { axis 0 1 0 anchor -0.045 -0.0782 -0.1538 }
+            device [ RotationalMotor { name "wheel2_joint" maxVelocity 20.0 } ]
+            endPoint Solid {
+              name "wheel2_solid"
+              translation -0.045 -0.0782 -0.1538
+              children [
+                Shape {
+                  castShadows FALSE
+                  appearance PBRAppearance { baseColor 0.1 0.1 0.1 roughness 1.0 }
+                  geometry Mesh { url "/home/mohanad/webots_tutotrial_1/src/webots_pkg_sim/meshes/wheel2_Link.STL" }
+                }
+              ]
+              boundingObject Cylinder { radius 0.086 height 0.1134 }
+              physics Physics { density -1 mass 1.0 }
+            }
+          }
+        ]
+        boundingObject Box { size 0.05 0.05 0.1 }
+        physics Physics { density -1 mass 0.5 }
+      }
+    }
+
+    # STEERING 3 + WHEEL 3 (rear left)
+    HingeJoint {
+      jointParameters HingeJointParameters { axis 0 0 1 anchor 0.34672 -0.2949 0.041107 }
+      device [ RotationalMotor { name "steering3_joint" maxVelocity 1.0 minPosition -1.57 maxPosition 1.57 } ]
+      endPoint Solid {
+        name "steering3_solid"
+        translation 0.34672 -0.2949 0.041107
+        children [
+          Shape {
+            castShadows FALSE
+            appearance PBRAppearance { baseColor 0.3 0.3 0.3 roughness 0.7 }
+            geometry Mesh { url "/home/mohanad/webots_tutotrial_1/src/webots_pkg_sim/meshes/steering3_Link.STL" }
+          }
+          HingeJoint {
+            jointParameters HingeJointParameters { axis 0 -1 0 anchor 0.045 0.0782 -0.1538 }
+            device [ RotationalMotor { name "wheel3_joint" maxVelocity 20.0 } ]
+            endPoint Solid {
+              name "wheel3_solid"
+              translation 0.045 0.0782 -0.1538
+              children [
+                Shape {
+                  castShadows FALSE
+                  appearance PBRAppearance { baseColor 0.1 0.1 0.1 roughness 1.0 }
+                  geometry Mesh { url "/home/mohanad/webots_tutotrial_1/src/webots_pkg_sim/meshes/wheel3_Link.STL" }
+                }
+              ]
+              boundingObject Cylinder { radius 0.086 height 0.1134 }
+              physics Physics { density -1 mass 1.0 }
+            }
+          }
+        ]
+        boundingObject Box { size 0.05 0.05 0.1 }
+        physics Physics { density -1 mass 0.5 }
+      }
+    }
+
+    # STEERING 4 + WHEEL 4 (rear right)
+    HingeJoint {
+      jointParameters HingeJointParameters { axis 0 0 1 anchor -0.34672 -0.2949 0.041107 }
+      device [ RotationalMotor { name "steering4_joint" maxVelocity 1.0 minPosition -1.57 maxPosition 1.57 } ]
+      endPoint Solid {
+        name "steering4_solid"
+        translation -0.34672 -0.2949 0.041107
+        children [
+          Shape {
+            castShadows FALSE
+            appearance PBRAppearance { baseColor 0.3 0.3 0.3 roughness 0.7 }
+            geometry Mesh { url "/home/mohanad/webots_tutotrial_1/src/webots_pkg_sim/meshes/steering4_Link.STL" }
+          }
+          HingeJoint {
+            jointParameters HingeJointParameters { axis 0 -1 0 anchor -0.045 0.0782 -0.1538 }
+            device [ RotationalMotor { name "wheel4_joint" maxVelocity 20.0 } ]
+            endPoint Solid {
+              name "wheel4_solid"
+              translation -0.045 0.0782 -0.1538
+              children [
+                Shape {
+                  castShadows FALSE
+                  appearance PBRAppearance { baseColor 0.1 0.1 0.1 roughness 1.0 }
+                  geometry Mesh { url "/home/mohanad/webots_tutotrial_1/src/webots_pkg_sim/meshes/wheel4_Link.STL" }
+                }
+              ]
+              boundingObject Cylinder { radius 0.086 height 0.1134 }
+              physics Physics { density -1 mass 1.0 }
+            }
+          }
+        ]
+        boundingObject Box { size 0.05 0.05 0.1 }
+        physics Physics { density -1 mass 0.5 }
+      }
+    }
+
+  ]
+  boundingObject Box { size 0.7 0.6 0.2 }
+  physics Physics { density -1 mass 17.9 }
+}

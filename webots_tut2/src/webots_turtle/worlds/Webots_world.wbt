@@ -1,0 +1,42 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/robots/robotis/turtlebot/protos/TurtleBot3Burger.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.18904651580389162 -0.013803615530665092 0.9818711091893326 2.65706880138823
+  position 3.4782700722512705 -0.861491901249894 0.8133462664218726
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  translation 0.57 0 0
+  floorSize 5 5
+  floorTileSize 1 1
+}
+TurtleBot3Burger {
+  name "turtlebot3"
+  hidden position_0_0 -1.449682527337444e-11
+  hidden position_0_1 -9.645281606112233e-12
+  hidden position_0_2 9.887824729774374e-11
+  hidden position2_0_2 -3.26772741833353e-11
+  hidden position3_0_2 1.4387857795015732e-13
+  hidden linearVelocity_0 -3.918208370003796e-12 3.1756882409388635e-13 2.0963293226422852e-14
+  hidden angularVelocity_0 2.09119772276412e-14 1.2942457833564755e-12 -9.60608738051093e-12
+  hidden linearVelocity_8 -4.7311429169972175e-12 -9.940295337021031e-16 -2.28752951491512e-14
+  hidden angularVelocity_8 1.972263199862482e-14 -1.4367375130650214e-10 -9.603012366846997e-12
+  hidden linearVelocity_9 -3.149610148788887e-12 -1.2395196994943963e-15 -2.0132754923697884e-14
+  hidden angularVelocity_9 3.2416860284417526e-14 -9.515696876570842e-11 -9.603455295504754e-12
+  hidden rotation_10 -0.11400231115797269 0.9880064690840641 -0.1041474440333567 5.990596329498827
+  hidden linearVelocity_10 -3.977827400735764e-12 7.761804618074349e-13 1.5649115888776387e-13
+  hidden angularVelocity_10 -1.940451089493447e-10 -9.944568168593733e-10 9.067965922013234e-35
+  translation 2.0231443680152803 0.000465040974923492 -0.00024773920598962496
+  rotation -0.0021126427796866925 -0.9999976788016008 -0.0004232397613501882 0.004641947195847913
+  controller "<extern>"
+}

@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: webots-pkg-sim
+Version: 0.0.0
+Summary: Webots ROS2 simulation package for Sojourner robot
+Maintainer: mohanad
+Maintainer-email: eng.mohanadalexu@gmail.com
+License: Apache-2.0

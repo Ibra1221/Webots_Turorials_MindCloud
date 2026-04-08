@@ -1,0 +1,41 @@
+running egg_info
+creating ../../build/webots_pkg_sim/webots_pkg_sim.egg-info
+writing ../../build/webots_pkg_sim/webots_pkg_sim.egg-info/PKG-INFO
+writing dependency_links to ../../build/webots_pkg_sim/webots_pkg_sim.egg-info/dependency_links.txt
+writing entry points to ../../build/webots_pkg_sim/webots_pkg_sim.egg-info/entry_points.txt
+writing requirements to ../../build/webots_pkg_sim/webots_pkg_sim.egg-info/requires.txt
+writing top-level names to ../../build/webots_pkg_sim/webots_pkg_sim.egg-info/top_level.txt
+writing manifest file '../../build/webots_pkg_sim/webots_pkg_sim.egg-info/SOURCES.txt'
+reading manifest file '../../build/webots_pkg_sim/webots_pkg_sim.egg-info/SOURCES.txt'
+writing manifest file '../../build/webots_pkg_sim/webots_pkg_sim.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/mohanad/webots_tutotrial_1/build/webots_pkg_sim/build
+creating /home/mohanad/webots_tutotrial_1/build/webots_pkg_sim/build/lib
+creating /home/mohanad/webots_tutotrial_1/build/webots_pkg_sim/build/lib/webots_pkg_sim
+copying webots_pkg_sim/__init__.py -> /home/mohanad/webots_tutotrial_1/build/webots_pkg_sim/build/lib/webots_pkg_sim
+copying webots_pkg_sim/webots_driver.py -> /home/mohanad/webots_tutotrial_1/build/webots_pkg_sim/build/lib/webots_pkg_sim
+running install
+running install_lib
+creating /home/mohanad/webots_tutotrial_1/install/webots_pkg_sim/lib/python3.12/site-packages/webots_pkg_sim
+copying /home/mohanad/webots_tutotrial_1/build/webots_pkg_sim/build/lib/webots_pkg_sim/__init__.py -> /home/mohanad/webots_tutotrial_1/install/webots_pkg_sim/lib/python3.12/site-packages/webots_pkg_sim
+copying /home/mohanad/webots_tutotrial_1/build/webots_pkg_sim/build/lib/webots_pkg_sim/webots_driver.py -> /home/mohanad/webots_tutotrial_1/install/webots_pkg_sim/lib/python3.12/site-packages/webots_pkg_sim
+byte-compiling /home/mohanad/webots_tutotrial_1/install/webots_pkg_sim/lib/python3.12/site-packages/webots_pkg_sim/__init__.py to __init__.cpython-312.pyc
+byte-compiling /home/mohanad/webots_tutotrial_1/install/webots_pkg_sim/lib/python3.12/site-packages/webots_pkg_sim/webots_driver.py to webots_driver.cpython-312.pyc
+running install_data
+creating /home/mohanad/webots_tutotrial_1/install/webots_pkg_sim/share/ament_index
+creating /home/mohanad/webots_tutotrial_1/install/webots_pkg_sim/share/ament_index/resource_index
+creating /home/mohanad/webots_tutotrial_1/install/webots_pkg_sim/share/ament_index/resource_index/packages
+copying resource/webots_pkg_sim -> /home/mohanad/webots_tutotrial_1/install/webots_pkg_sim/share/ament_index/resource_index/packages
+copying package.xml -> /home/mohanad/webots_tutotrial_1/install/webots_pkg_sim/share/webots_pkg_sim
+creating /home/mohanad/webots_tutotrial_1/install/webots_pkg_sim/share/webots_pkg_sim/launch
+copying launch/sim_launch.py -> /home/mohanad/webots_tutotrial_1/install/webots_pkg_sim/share/webots_pkg_sim/launch
+creating /home/mohanad/webots_tutotrial_1/install/webots_pkg_sim/share/webots_pkg_sim/urdf
+copying urdf/robot.urdf -> /home/mohanad/webots_tutotrial_1/install/webots_pkg_sim/share/webots_pkg_sim/urdf
+creating /home/mohanad/webots_tutotrial_1/install/webots_pkg_sim/share/webots_pkg_sim/worlds
+copying worlds/empty.wbt -> /home/mohanad/webots_tutotrial_1/install/webots_pkg_sim/share/webots_pkg_sim/worlds
+running install_egg_info
+Copying ../../build/webots_pkg_sim/webots_pkg_sim.egg-info to /home/mohanad/webots_tutotrial_1/install/webots_pkg_sim/lib/python3.12/site-packages/webots_pkg_sim-0.0.0-py3.12.egg-info
+running install_scripts
+Installing webots_driver script to /home/mohanad/webots_tutotrial_1/install/webots_pkg_sim/lib/webots_pkg_sim
+writing list of installed files to '/home/mohanad/webots_tutotrial_1/build/webots_pkg_sim/install.log'

@@ -1,0 +1,3 @@
+[console_scripts]
+rover_driver = webots_pkg_sim.rover_driver:main
+webots_driver = webots_pkg_sim.webots_driver:main
