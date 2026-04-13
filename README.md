@@ -20,10 +20,15 @@ This repo contains projects and guide for beginners in webots simulation program
 * TroubleShooting for Uninstalling :
   
     ``sudo snap remove webots``
+
+# Explaining the repo Content⚡️ :
+
+
 # Second The First tutorial📁 : 
 * First we open webots from the terminal 
 
 ``webots``
+
 
 
 this will open the program and then we make a new project by using the menu 
