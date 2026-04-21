@@ -1,3 +1,6 @@
 [console_scripts]
+costmap = webots_pkg_sim.costmap:main
+costmap_lifecycle = webots_pkg_sim.costmap_lifecyle:main
 rover_driver = webots_pkg_sim.rover_driver:main
+vo_odom = webots_pkg_sim.vo_code:main
 webots_driver = webots_pkg_sim.webots_driver:main

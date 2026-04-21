@@ -65,7 +65,8 @@
     <origin xyz="0.1 0 0.16" rpy="0 0 0"/>
   </joint>
   <link name="laser_link"/>
-
+  
+  <!--here we put the webots plugin to use the controller in it using the pkg_name.driver_node.class_name--> 
   <webots>
     <plugin type="webots_pkg_sim.webots_driver.RobotDriver"/>
   </webots>

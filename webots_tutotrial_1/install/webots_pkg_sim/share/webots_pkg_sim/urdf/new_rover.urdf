@@ -21,6 +21,69 @@
     </collision>
   </link>
 
+  <!-- ✅ IMU link -->
+  <link name="imu_link">
+    <inertial>
+      <mass value="0.01"/>
+      <inertia ixx="0.00001" ixy="0" ixz="0" iyy="0.00001" iyz="0" izz="0.00001"/>
+    </inertial>
+  </link>
+  <joint name="imu_joint" type="fixed">
+    <origin xyz="0 0 0.1" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="imu_link"/>
+  </joint>
+
+  <!-- ✅ GPS link -->
+  <link name="gps_link">
+    <inertial>
+      <mass value="0.01"/>
+      <inertia ixx="0.00001" ixy="0" ixz="0" iyy="0.00001" iyz="0" izz="0.00001"/>
+    </inertial>
+    <visual>
+      <geometry><box size="0.05 0.05 0.02"/></geometry>
+      <material name="black"><color rgba="0.1 0.1 0.1 1"/></material>
+    </visual>
+  </link>
+  <joint name="gps_joint" type="fixed">
+    <origin xyz="0 0 0.22" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="gps_link"/>
+  </joint>
+
+  <!-- ✅ OAK-D Camera body -->
+  <link name="oakd_link">
+    <inertial>
+      <mass value="0.1"/>
+      <inertia ixx="0.0001" ixy="0" ixz="0" iyy="0.0001" iyz="0" izz="0.0001"/>
+    </inertial>
+    <visual>
+      <geometry><box size="0.02 0.1 0.03"/></geometry>
+      <material name="black"><color rgba="0.1 0.1 0.1 1"/></material>
+    </visual>
+  </link>
+  <joint name="oakd_joint" type="fixed">
+    <origin xyz="0.4 0 0.15" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="oakd_link"/>
+  </joint>
+
+  <!-- ✅ OAK-D RGB optical frame -->
+  <link name="oakd_rgb_optical_link"/>
+  <joint name="oakd_rgb_optical_joint" type="fixed">
+    <origin xyz="0 0 0" rpy="-1.5708 0 -1.5708"/>
+    <parent link="oakd_link"/>
+    <child link="oakd_rgb_optical_link"/>
+  </joint>
+
+  <!-- ✅ OAK-D Depth optical frame (same pose as RGB for aligned depth) -->
+  <link name="oakd_depth_optical_link"/>
+  <joint name="oakd_depth_optical_joint" type="fixed">
+    <origin xyz="0 0 0" rpy="-1.5708 0 -1.5708"/>
+    <parent link="oakd_link"/>
+    <child link="oakd_depth_optical_link"/>
+  </joint>
+
   <!-- STEERING 1 (front left) -->
   <link name="steering1_Link">
     <inertial>
@@ -197,33 +260,9 @@
     <axis xyz="0 -1 0"/>
   </joint>
 
-  <!-- OAK-D Camera -->
-  <link name="oakd_link">
-    <inertial>
-      <mass value="0.1"/>
-      <inertia ixx="0.0001" ixy="0" ixz="0" iyy="0.0001" iyz="0" izz="0.0001"/>
-    </inertial>
-    <visual>
-      <geometry><box size="0.02 0.1 0.03"/></geometry>
-      <material name="black"><color rgba="0.1 0.1 0.1 1"/></material>
-    </visual>
-  </link>
-  <joint name="oakd_joint" type="fixed">
-    <origin xyz="0.4 0 0.15" rpy="0 0 0"/>
-    <parent link="base_link"/>
-    <child link="oakd_link"/>
-  </joint>
-
-  <link name="oakd_optical_link"/>
-  <joint name="oakd_optical_joint" type="fixed">
-    <origin xyz="0 0 0" rpy="-1.5708 0 -1.5708"/>
-    <parent link="oakd_link"/>
-    <child link="oakd_optical_link"/>
-  </joint>
-
   <!-- Webots plugin -->
   <webots>
-    <plugin type="webots_pkg_sim.webots_localization.RoverDriver"/>
+    <plugin type="webots_pkg_sim.swerve_driver.RoverDriverSwerve"/>
   </webots>
 
 </robot>

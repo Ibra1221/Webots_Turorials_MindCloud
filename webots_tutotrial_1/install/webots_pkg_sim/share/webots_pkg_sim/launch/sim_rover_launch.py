@@ -10,6 +10,7 @@ def generate_launch_description():
     pkg  = get_package_share_directory('webots_pkg_sim')
     urdf = os.path.join(pkg, 'urdf', 'new_rover.urdf')
 
+    # ✅ FIX: read file contents not just path
     with open(urdf, 'r') as f:
         robot_description = f.read()
 
@@ -19,14 +20,20 @@ def generate_launch_description():
 
     driver = WebotsController(
         robot_name='new_rover',
-        parameters=[{'robot_description': urdf}]
+        parameters=[{
+            'robot_description': robot_description,  # ✅ contents not path
+            'use_sim_time': True
+        }]
     )
 
     rsp = Node(
         package='robot_state_publisher',
         executable='robot_state_publisher',
         output='screen',
-        parameters=[{'robot_description': robot_description}]
+        parameters=[{
+            'robot_description': robot_description,
+            'use_sim_time': True
+        }]
     )
 
     return LaunchDescription([

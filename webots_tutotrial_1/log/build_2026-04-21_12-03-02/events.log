@@ -1,0 +1,8 @@
+[0.000000] (-) TimerEvent: {}
+[0.000284] (webots_pkg_sim) JobQueued: {'identifier': 'webots_pkg_sim', 'dependencies': OrderedDict()}
+[0.000491] (webots_pkg_sim) JobStarted: {'identifier': 'webots_pkg_sim'}
+[0.099765] (-) TimerEvent: {}
+[0.200696] (-) TimerEvent: {}
+[0.211275] (webots_pkg_sim) StderrLine: {'line': b'Traceback (most recent call last):\n  File "/usr/lib/python3/dist-packages/colcon_core/executor/__init__.py", line 91, in __call__\n    rc = await self.task(*args, **kwargs)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/colcon_core/task/__init__.py", line 93, in __call__\n    return await task_method(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/colcon_ros/task/ament_python/build.py", line 54, in build\n    data_files = get_data_files_mapping(\n                 ^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/colcon_core/task/python/__init__.py", line 36, in get_data_files_mapping\n    assert len(data_file) == 2\n           ^^^^^^^^^^^^^^^^^^^\nAssertionError\n'}
+[0.211900] (webots_pkg_sim) JobEnded: {'identifier': 'webots_pkg_sim', 'rc': 1}
+[0.221734] (-) EventReactorShutdown: {}
