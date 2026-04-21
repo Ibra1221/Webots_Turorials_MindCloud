@@ -44,6 +44,10 @@ class RoverDriverSwerve:
         self._lin_y = 0.0   # strafe left/right  ✅ SWERVE: adds lateral movement
         self._ang   = 0.0   # rotation
 
+        self._step_count = 0
+
+        self._depth_ready = False
+
         rclpy.init(args=None)
         self._node = rclpy.create_node("rover_driver")
 
@@ -80,8 +84,13 @@ class RoverDriverSwerve:
             self._camera.enable(timestep)
 
         self._depth = self._robot.getDevice("oakd_depth")
-        if self._depth:
+
+        try:
             self._depth.enable(timestep)
+            self._node.get_logger().info("Depth sensor enabled")
+        except Exception as e:
+            self._node.get_logger().error(f"Depth sensor enable failed: {e}")
+            self._depth = None
 
         # ── ROS subscribers ────────────────────────────────────
         self._node.create_subscription(
@@ -288,6 +297,11 @@ class RoverDriverSwerve:
     
 
     def step(self):
+        self._step_count += 1
+
+        # Wait for sensors to initialize
+        if self._step_count < 2:
+            return
         rclpy.spin_once(self._node, timeout_sec=0)
         stamp = self._node.get_clock().now().to_msg()
 
@@ -301,7 +315,7 @@ class RoverDriverSwerve:
         # Apply wheel velocities with per-wheel axis correction.
         # cmds[name] is already signed (negative = reverse direction),
         # so we must NOT unconditionally negate wheels 3/4 as before.
-        print(cmds)
+        #print(cmds)
         for name in WHEEL_JOINTS:
             self._wheels[name].setVelocity(
                 cmds[name] * WHEEL_AXIS_SIGN[name]
@@ -390,11 +404,24 @@ class RoverDriverSwerve:
                 self._pub_cam_info.publish(cam_info)
 
         # ── Publish depth camera ───────────────────────────────────
+        # ── Publish depth camera ───────────────────────────────────
         if self._depth:
-            raw_d = self._depth.getRangeImage()
+            w = self._depth.getWidth()
+            h = self._depth.getHeight()
+
+            # 🚨 REAL readiness check (this is the fix)
+            if w > 0 and h > 0:
+                self._depth_ready = True
+
+            if not self._depth_ready:
+                return  # skip until sensor is actually active
+
+            try:
+                raw_d = self._depth.getRangeImage()
+            except Exception:
+                return  # still not ready, skip safely
+
             if raw_d:
-                w = self._depth.getWidth()
-                h = self._depth.getHeight()
                 data = struct.pack(f"{w*h}f", *raw_d)
 
                 depth_msg = Image()
@@ -404,12 +431,18 @@ class RoverDriverSwerve:
                 depth_msg.height   = h
                 depth_msg.encoding = "32FC1"
                 depth_msg.step     = w * 4
-                depth_msg.data     = list(data)
-                self._pub_depth.publish(depth_msg)
+
+                # ✅ FIX: do NOT convert to list
+                depth_msg.data = data
+
+                if rclpy.ok():
+                    self._pub_depth.publish(depth_msg)
 
                 depth_info = self._make_camera_info(
                     stamp, "oakd_depth_optical_link", w, h)
-                self._pub_depth_info.publish(depth_info)
+
+                if rclpy.ok():
+                    self._pub_depth_info.publish(depth_info)
 
         # ── Publish joint states ───────────────────────────────────
         js = JointState()

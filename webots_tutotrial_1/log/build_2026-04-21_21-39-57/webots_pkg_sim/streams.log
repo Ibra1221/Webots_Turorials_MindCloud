@@ -1,0 +1,28 @@
+[2.279s] Invoking command in '/home/ibrahim/webots_tutotrial_1/src/webots_pkg_sim': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/ibrahim/webots_tutotrial_1/build/webots_pkg_sim/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ibrahim/webots_tutotrial_1/install/webots_pkg_sim/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/webots_pkg_sim build --build-base /home/ibrahim/webots_tutotrial_1/build/webots_pkg_sim/build install --record /home/ibrahim/webots_tutotrial_1/build/webots_pkg_sim/install.log --single-version-externally-managed install_data
+[3.048s] running egg_info
+[3.110s] writing ../../build/webots_pkg_sim/webots_pkg_sim.egg-info/PKG-INFO
+[3.111s] writing dependency_links to ../../build/webots_pkg_sim/webots_pkg_sim.egg-info/dependency_links.txt
+[3.112s] writing entry points to ../../build/webots_pkg_sim/webots_pkg_sim.egg-info/entry_points.txt
+[3.112s] writing requirements to ../../build/webots_pkg_sim/webots_pkg_sim.egg-info/requires.txt
+[3.112s] writing top-level names to ../../build/webots_pkg_sim/webots_pkg_sim.egg-info/top_level.txt
+[3.238s] reading manifest file '../../build/webots_pkg_sim/webots_pkg_sim.egg-info/SOURCES.txt'
+[3.241s] writing manifest file '../../build/webots_pkg_sim/webots_pkg_sim.egg-info/SOURCES.txt'
+[3.241s] running build
+[3.242s] running build_py
+[3.242s] copying webots_pkg_sim/vo_code.py -> /home/ibrahim/webots_tutotrial_1/build/webots_pkg_sim/build/lib/webots_pkg_sim
+[3.243s] running install
+[3.258s] running install_lib
+[3.321s] copying /home/ibrahim/webots_tutotrial_1/build/webots_pkg_sim/build/lib/webots_pkg_sim/vo_code.py -> /home/ibrahim/webots_tutotrial_1/install/webots_pkg_sim/lib/python3.12/site-packages/webots_pkg_sim
+[3.323s] byte-compiling /home/ibrahim/webots_tutotrial_1/install/webots_pkg_sim/lib/python3.12/site-packages/webots_pkg_sim/vo_code.py to vo_code.cpython-312.pyc
+[3.330s] running install_data
+[3.331s] running install_egg_info
+[3.398s] removing '/home/ibrahim/webots_tutotrial_1/install/webots_pkg_sim/lib/python3.12/site-packages/webots_pkg_sim-0.0.0-py3.12.egg-info' (and everything under it)
+[3.399s] Copying ../../build/webots_pkg_sim/webots_pkg_sim.egg-info to /home/ibrahim/webots_tutotrial_1/install/webots_pkg_sim/lib/python3.12/site-packages/webots_pkg_sim-0.0.0-py3.12.egg-info
+[3.401s] running install_scripts
+[3.802s] Installing costmap script to /home/ibrahim/webots_tutotrial_1/install/webots_pkg_sim/lib/webots_pkg_sim
+[3.803s] Installing costmap_lifecycle script to /home/ibrahim/webots_tutotrial_1/install/webots_pkg_sim/lib/webots_pkg_sim
+[3.803s] Installing rover_driver script to /home/ibrahim/webots_tutotrial_1/install/webots_pkg_sim/lib/webots_pkg_sim
+[3.804s] Installing vo_odom script to /home/ibrahim/webots_tutotrial_1/install/webots_pkg_sim/lib/webots_pkg_sim
+[3.804s] Installing webots_driver script to /home/ibrahim/webots_tutotrial_1/install/webots_pkg_sim/lib/webots_pkg_sim
+[3.805s] writing list of installed files to '/home/ibrahim/webots_tutotrial_1/build/webots_pkg_sim/install.log'
+[3.864s] Invoked command in '/home/ibrahim/webots_tutotrial_1/src/webots_pkg_sim' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/ibrahim/webots_tutotrial_1/build/webots_pkg_sim/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ibrahim/webots_tutotrial_1/install/webots_pkg_sim/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/webots_pkg_sim build --build-base /home/ibrahim/webots_tutotrial_1/build/webots_pkg_sim/build install --record /home/ibrahim/webots_tutotrial_1/build/webots_pkg_sim/install.log --single-version-externally-managed install_data
