@@ -12,7 +12,7 @@ setup(
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
-        ('share/' + package_name + '/launch', ['launch/sim_rover_launch.py']),
+        ('share/' + package_name + '/launch', ['launch/sim_rover_launch.py','launch/swerve_launch.py','launch/sim_launch.py']),
         ('share/' + package_name + '/urdf', ['urdf/new_rover.urdf']),
         ('share/' + package_name + '/worlds', ['worlds/my_world.wbt']),  # ← comma was missing here
         ('share/' + package_name + '/meshes', [
@@ -38,6 +38,9 @@ setup(
         'console_scripts': [
             'webots_driver = webots_pkg_sim.webots_driver:main',
             'rover_driver = webots_pkg_sim.rover_driver:main',
+            'costmap=webots_pkg_sim.costmap:main',
+            'costmap_lifecycle=webots_pkg_sim.costmap_lifecyle:main',
+            'vo_odom=webots_pkg_sim.vo_code:main',
         ],
     },
 )
